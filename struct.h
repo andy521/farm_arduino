@@ -1,4 +1,7 @@
-int count = 0;
+int sequence = 0;          // 流水号
+int times = 0;     // 计数器
+int interval = 5; // 发送频率
+
 // 包头
 typedef struct f_head
 {
@@ -38,8 +41,8 @@ typedef struct f_06
 } f_06;
 
 void handSequence() {
-  if (count > 100) {
-    count = 0;
+  if (sequence > 100) {
+    sequence = 0;
   }
 }
 

@@ -10,7 +10,7 @@ void sendKeepAlive() {
   
   // 消息体头部
   head.length = 0;
-  head.sequence = count;
+  head.sequence = sequence++;
   head.type = 1;
   memcpy(data + d_position, &head, sizeof(f_head));
   d_position += sizeof(f_head);

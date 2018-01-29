@@ -10,9 +10,6 @@
 #include "handData.h"
 #include "avr/boot.h"
 
-
-const char head = 0x31;
-
 void setup() {
   Serial.begin(38400);
 }
@@ -24,7 +21,7 @@ void loop() {
       uint8_t data[d_len];
       for (int i = 0; i < d_len; i++)
         data[i] = Serial.read();
-      handData(data, d_len);
+        handData(data, d_len);
     }
   }
 
@@ -32,12 +29,13 @@ void loop() {
   if (registe_flag == -1 ) {
     sendRegister();
   } else {
-    if (count % 2 == 0) {
+    if (times % interval == 0) {
       sendTemp();
       sendHumi();
     }
   }
   handSequence();
+  times++;
   delay(1000);
 }
 

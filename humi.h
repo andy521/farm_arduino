@@ -12,7 +12,7 @@ void sendHumi() {
 
   // 消息体头部
   head.length = b_length;
-  head.sequence = count++;
+  head.sequence = sequence++;
   head.type = 6;
   memcpy(data + d_position, &head, sizeof(f_head));
   d_position += sizeof(f_head);

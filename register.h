@@ -41,15 +41,5 @@ void sendRegister() {
   uint8_t d_tobyte[d_length];
   memcpy(d_tobyte, data, d_length);
   Serial.write(d_tobyte, d_length);
- 
 }
-
-
-void handlerRegister(uint8_t *data) {
-  registe_flag = 0;
-  int b_len = sizeof(f_f0);
-  memcpy(&ff0, data, b_len);
-}
-
-
 

@@ -36,5 +36,10 @@ void sendHumi() {
   Serial.write(d_tobyte, d_length);
 }
 
+void handlerHumi(uint8_t *data) {
+  int b_len = sizeof(f_f0);
+  memcpy(&ff0, data, b_len);
+}
+
 
 

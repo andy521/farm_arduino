@@ -1,6 +1,8 @@
-int sequence = 0;          // 流水号
+
+
+int sequence = 0;  // 流水号
 int times = 0;     // 计数器
-int interval = 5; // 发送频率
+int interval = 50; // 发送频率
 
 // 包头
 typedef struct f_head
